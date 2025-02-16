@@ -1,28 +1,24 @@
 
 
 @font-face {
-	font-family: IRAN-Bold;
+	font-family: vazir-bold;
 	font-style: normal;
 	font-weight: bold;
-	src: url('../fonts/ttf/IRANBold.ttf') format('ttf'),
-		 url('../fonts/woff2/IRANBold.woff2') format('woff2'),  
-		 url('../fonts/woff/IRANBold.woff') format('woff');  
+	src: url('../fonts/vazir-bold/Vazir-Bold.ttf') format('ttf'),
+		 url('../fonts/vazir-bold/Vazir-Bold.woff2') format('woff2'),  
+		 url('../fonts/vazir-bold/Vazir-Bold.woff') format('woff');  
 }
 
 @font-face {
-	font-family: IRAN-BLACK;
-	font-style: normal;
-	font-weight: 600;
-	src: url('../fonts/ttf/IRANBlack.ttf') format('ttf'),
-		 url('../fonts/woff2/IRANBlack.woff2') format('woff2'),  
-		 url('../fonts/woff/IRANBlack.woff') format('woff');  
+	font-family:vazir-light;
+	src: url('../fonts/vazir-light/Vazir-Light.ttf') format('ttf'),
+		 url('../fonts/vazir-light/Vazir-Light.woff2') format('woff2'),  
+		 url('../fonts/vazir-light/Vazir-Light.woff') format('woff');  
 }
 
 @font-face {
-	font-family: IRAN;
-	font-style: normal;
-	font-weight: normal;
-	src: url('../fonts/ttf/IRAN.ttf') format('ttf'),
-		 url('../fonts/woff2/IRAN.woff2') format('woff2'),  
-		 url('../fonts/woff/IRAN.woff') format('woff');  
+	font-family: vazir;
+	src: url('../fonts/vazir/Vazir.ttf') format('ttf'),
+		 url('../fonts/vazir/Vazir.woff2') format('woff2'),  
+		 url('../fonts/vazir/Vazir.woff') format('woff');  
 }
