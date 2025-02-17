@@ -57,5 +57,7 @@ svg{
 }
 *{
 	box-sizing: border-box;
+}
+svg , path{
 	transition: all .3s ease;
 }
