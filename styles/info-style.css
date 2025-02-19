@@ -13,21 +13,21 @@
     gap: .7rem;
     align-items: center;
     border-radius: .6rem;
+
    }
    .info__box:nth-child(1){
-   background-color: #fdf7e1;
-   
+   background-color: #fbd44838;
    }
    .info__box:nth-child(2){
-     background-color: #e8ebed;
+     background-color: #9ad0f73b;
      
    }
    .info__box:nth-child(3){
-     background-color: #f1eaf9;
+     background-color: #af6ff728;
      
    }
    .info__box:nth-child(4){
-     background-color: #e9f5f8;
+     background-color: #5fd5f32f;
    
    }
    .info__box__icon svg{
@@ -38,11 +38,13 @@
     display: flex;
     flex-direction: column;
     gap: .2rem;
-   }
-   .info__box__desc__title{
+  }
+  .info__box__desc__title{
     font-family: vazir-bold;
-   }
-   .info__box__desc__text{
+    color: var(--text-bold);
+  }
+  .info__box__desc__text{
+     color: var(--text-bold);
    font-size: .9rem;
    }
    
