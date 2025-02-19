@@ -70,6 +70,10 @@
   .nav__center-category svg {
     fill: var(--text-active);
   }
+  .nav__center-category  svg path{
+    stroke: var(--text-active);
+    fill: var(--text-active);
+  }
   .nav__center-list {
     display: flex;
     justify-content: center;
