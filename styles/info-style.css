@@ -1,6 +1,7 @@
 /* start info section style  */
 .info{
-    margin: 2rem 0;
+  /* width: 80% ; */
+    margin: 2rem ;
     display: flex;
     justify-content: center;
     gap: 2rem;

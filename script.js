@@ -6,14 +6,25 @@ const accordionMenu = $.querySelector(".nav__center");
 const dropdown = $.querySelectorAll(".dropdown");
 const themeOption = $.querySelectorAll(".nav__profile-content-footer-item");
 const searchBoxInput = $.querySelector(".nav__center__search-box__input");
-const root = document.documentElement;
-let theme
+const popularCourseBtn = $.querySelectorAll(".popular-course__btn");
+const courseItems = $.querySelectorAll(".course__item");
 const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+let theme
+const root = document.documentElement;
 
 
 
 
-
+popularCourseBtn.forEach(elem=>{
+ 
+  elem.addEventListener('click',()=>{
+    popularCourseBtn.forEach(el=>{
+      el.classList.remove('popular-course__btn__active')
+    })
+    elem.classList.add('popular-course__btn__active')
+    applyCoursesFilter(elem.id)
+  })
+})
 
 searchBoxInput.addEventListener('focus',searchBoxInputClear)
 searchBoxInput.addEventListener('blur',searchBoxInputClear)
@@ -72,9 +83,10 @@ profile.addEventListener("click", () => {
 window.addEventListener('DOMContentLoaded',()=>{
   if (!localStorage.getItem('theme')) {
     localStorage.setItem('theme', 'auto')
-   
   }
   applyTheme()
+  applyCoursesFilter('web')
+
 })
 function changeTheme(elem){
   theme=''
@@ -127,5 +139,12 @@ function applyTheme(){
   document.querySelector(`#${th}`).classList.add("nav__profile-content-footer-item-active");
   
 }
-
+function applyCoursesFilter(e){ 
+  
+ courseItems.forEach(elem=>{
+  if(elem.classList.contains(e)) {
+    elem.style.display='block'
+  }else elem.style.display='none'
+ })
+}
 
