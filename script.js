@@ -1,5 +1,6 @@
 const $ = document;
 
+const nav = $.querySelector("nav");
 const profile = $.querySelector(".nav__left__profile-img");
 const toggle = $.querySelector(".nav__toggle");
 const accordionMenu = $.querySelector(".nav__center");
@@ -8,11 +9,48 @@ const themeOption = $.querySelectorAll(".nav__profile-content-footer-item");
 const searchBoxInput = $.querySelector(".nav__center__search-box__input");
 const popularCourseBtn = $.querySelectorAll(".popular-course__btn");
 const courseItems = $.querySelectorAll(".course__item");
+const profileContent = $.querySelector(".nav__profile-content");
 const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
 let theme
+let oldScroll=0
 const root = document.documentElement;
 
 
+
+window.addEventListener('DOMContentLoaded',()=>{
+  if (window.scrollY == 0) nav.classList.add("nav-down");
+
+  if (!localStorage.getItem('theme')) {
+    localStorage.setItem('theme', 'auto')
+  }
+  applyTheme()
+  applyCoursesFilter('web')
+
+})
+window.addEventListener('scroll', ()=>{
+ let newScroll=window.scrollY
+ if(newScroll>oldScroll){
+  nav.classList.remove('nav-down')
+}
+else{
+  nav.classList.add('nav-down')
+ }
+
+ oldScroll=newScroll
+ 
+})
+window.addEventListener('click', event=>{
+  if (!toggle.contains(event.target) && !accordionMenu.contains(event.target)) {
+    toggle.classList.remove("nav__toggle-close");
+    accordionMenu.classList.remove("nav__center-active");
+  }
+    
+
+if(!profile.contains(event.target) && !profileContent.contains(event.target) ){
+  profileContent.classList.remove("nav__profile-content-open");
+
+}
+})
 
 
 popularCourseBtn.forEach(elem=>{
@@ -45,7 +83,6 @@ function searchBoxInputClear(){
 }
 themeOption.forEach((elem) => {
   elem.addEventListener("click", () => {
-  
    changeTheme(elem)
    applyTheme()
      
@@ -69,25 +106,22 @@ dropdown.forEach((elem) => {
   });
 });
 
-toggle.addEventListener("click", () => {
-  toggle.classList.toggle("nav__toggle-close");
-  accordionMenu.classList.toggle("nav__center-active");
+toggle.addEventListener("click", (event) => {
+  event.stopPropagation()
+    toggle.classList.toggle("nav__toggle-close");
+    accordionMenu.classList.toggle("nav__center-active");
+
 });
 
-profile.addEventListener("click", () => {
-  const profileContent = $.querySelector(".nav__profile-content");
+profile.addEventListener("click", (event) => {
+  event.stopPropagation()
+  console.log('click2');
   profileContent.classList.toggle("nav__profile-content-open");
+  
 });
 
 
-window.addEventListener('DOMContentLoaded',()=>{
-  if (!localStorage.getItem('theme')) {
-    localStorage.setItem('theme', 'auto')
-  }
-  applyTheme()
-  applyCoursesFilter('web')
 
-})
 function changeTheme(elem){
   theme=''
   theme=elem.id
