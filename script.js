@@ -48,7 +48,6 @@ window.addEventListener('click', event=>{
 
 if(!profile.contains(event.target) && !profileContent.contains(event.target) ){
   profileContent.classList.remove("nav__profile-content-open");
-
 }
 })
 

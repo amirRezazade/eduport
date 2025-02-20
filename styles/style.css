@@ -21,8 +21,166 @@ html {
 body {
   background-color: var(--bg-color);
 }
-.nav__toggle *
-{
-  pointer-events: none;
+
+/* start offer courses section style  */
+.offer-courses{
+ width: 80%;
+ margin: 3rem auto;
+ text-align: center;
+}
+.offer-courses__title{
+font-family: vazir-bold;
+color: var(--text-bold);
+font-size: 2rem;
+
+}
+.offer-courses__text{
+  color: var(--text-light);
+  font-size: .9rem;
+  margin: 1.5rem;
+}
+.offer-courses__slider{
+ display: flex;
+ height: auto;
+ margin: 2rem 0;
+ /* overflow-x:auto ; */
+ gap: 1.5rem;
+}
+.offer-courses__item{
+width: 32%;
+height: auto;
+border: 1px solid rgba(174, 174, 174, 0.318);
+border-radius: .6rem;
+background-color: var(--bg-color);
+}
+.offer-courses__item__photo{
+ width: 100%;
+ /* height: 50%; */
+ border-radius: .6rem;
+}
+.offer-courses__item__img{
+ border-top-left-radius: .6rem;
+ border-top-right-radius: .6rem;
+ object-fit: cover;
+}
+.offer-courses__item__content{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  padding: .7rem;
+align-items: start;
+}
+.offer-courses__item__content__header{
+  width: 100%;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+font-size: .8rem;
+gap: .5rem;
+}
+.offer-courses__item__content__header__category{
+  background-color: var(--bg-hover);
+  color: var(--text-active);
+  border-radius: .4rem;
+  padding:.3rem .5rem;
+}
+.offer-courses__item__content__header__level{
+  background-color: #24292d;
+  color: #fff;
+  margin-left: auto;
+  padding:.3rem .5rem;
+  border-radius: .4rem;
+}
+.offer-courses__item__content__header__icon{
+ opacity: .7;
+ cursor: pointer;
+ fill: var(--text-bold);
+}
+.offer-courses__item__content__name{
+ margin: 1rem 0;
+ color: var(--text-bold);
+ transition: all .3s ease;
+} 
+.offer-courses__item__content__name:hover{
+  color: var(--text-active);
+}
+.offer-courses__item__content__info{
+ width: 100%;
+ display: flex;
+justify-content: space-between;
+align-items: center;
+flex-wrap: wrap;
+}
+.offer-courses__item__content__info__right{
+ display: flex;
+ align-items: center;
+}
+.offer-courses__item__content__info__right__stars{
+display: flex;align-items: center;
+color: #f1cb37;
+
 }
 
+.offer-courses__item__content__info__right__text{
+ font-size: .9rem;
+ color: var(--text-light);
+ margin-right: .5rem;
+}
+.offer-courses__item__content__info__left{
+ font-size: .9rem;
+}
+.offer-courses__item__content__info__left__num{
+ color: var(--text-bold);
+}
+.offer-courses__item__content__info__left__text{
+color: var(--text-light);
+}
+.offer-courses__item__content__info__bottom{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: .9rem;
+  color: var(--text-bold);
+  margin: .5rem 0;
+}
+.offer-courses__item__content__info__bottom__sec{
+display: flex;
+gap: .3rem;
+align-items: center;
+}
+.offer-courses__item__content__footer{
+width: 100%;
+padding-top: .8rem ;
+display: flex;
+justify-content: space-between;
+align-items: center;
+border-top: 1px solid rgba(165, 165, 165, 0.236);
+gap: 1rem;
+
+}
+.offer-courses__item__content__footer__photo{
+ width: 40px;
+ height: 40px;
+ background-color: red;
+ overflow: hidden;
+ border-radius: .6rem;
+}
+.offer-courses__item__content__footer__img{
+  object-fit: cover;
+  border-radius: .6rem;
+}
+.offer-courses__item__content__footer__name{
+margin-left: auto;
+font-size: .9rem;
+color: var(--text-bold);
+cursor: pointer;
+}
+.offer-courses__item__content__footer__price{
+color: #0cbc87;
+font-family: vazir-bold;
+cursor: pointer;
+}
+
+/* finish offer courses section style  */
