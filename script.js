@@ -150,6 +150,7 @@ function applyTheme(){
     root.style.setProperty("--bg-hover", "#232b39");
     root.style.setProperty("--item-bg-color", "#0f0f10");
     root.style.setProperty("--bg-color", "#222529");
+    root.style.setProperty("--bg-color-2", "#2a2c31");
     root.style.setProperty("--bg-green-color", "#051b11");
     document.querySelector('.nav__right-img').src='images/navbar/logo-light.svg'
   }
@@ -159,6 +160,7 @@ function applyTheme(){
     root.style.setProperty("--bg-hover", "#e9eff9");
     root.style.setProperty("--item-bg-color", "#ffffff");
     root.style.setProperty("--bg-color", "#ffffff");
+    root.style.setProperty("--bg-color-2", "#f5f7f9");
     root.style.setProperty("--bg-green-color", "#cff2e7");
     document.querySelector('.nav__right-img').src='images/navbar/logo.svg'
   }
@@ -169,6 +171,7 @@ function applyTheme(){
       root.style.setProperty("--bg-hover", "#232b39");
       root.style.setProperty("--item-bg-color", "#0f0f10");
       root.style.setProperty("--bg-color", "#222529");
+      root.style.setProperty("--bg-color-2", "#2a2c31");
       root.style.setProperty("--bg-green-color", "#051b11");
       document.querySelector('.nav__right-img').src='images/navbar/logo-light.svg'
      } else {
