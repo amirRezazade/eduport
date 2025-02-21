@@ -10,12 +10,27 @@ const searchBoxInput = $.querySelector(".nav__center__search-box__input");
 const popularCourseBtn = $.querySelectorAll(".popular-course__btn");
 const courseItems = $.querySelectorAll(".course__item");
 const profileContent = $.querySelector(".nav__profile-content");
+const offerCoursesSlider = $.querySelector(".offer-courses__slider__content");
+const offerCoursesItem = $.querySelectorAll(".offer-courses__item").length;
 const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
 let theme
 let oldScroll=0
 const root = document.documentElement;
+let slideIndex=0
 
+// console.log(offerCoursesSlider);
 
+function showSlider(index){
+  let width = $.querySelector(".offer-courses__item").getBoundingClientRect().width
+  if(index=='next'){
+   slideIndex <= offerCoursesItem-2 ? slideIndex++ : slideIndex=0 
+  }
+  if(index=='prev'){
+    slideIndex <= 0 ? slideIndex=offerCoursesItem-1 : slideIndex--
+  }
+offerCoursesSlider.style.transform = `translateX(${width * slideIndex}px)`;
+}
+// ..................... 
 
 window.addEventListener('DOMContentLoaded',()=>{
   if (window.scrollY == 0) nav.classList.add("nav-down");
