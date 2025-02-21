@@ -195,6 +195,40 @@ color: #0cbc87;
 font-family: vazir-bold;
 cursor: pointer;
 }
+.offer-courses__item__content__footer__buy{
+  background-color: var(--bg-hover);
+  padding: .5rem;
+  color: #0cbc87;
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+ font-size: .9rem;
+ border-radius: .2rem;
+ transition: all .3s ease;
+ cursor: pointer;
+ display: none;
+}
+.offer-courses__item__content__footer__buy svg{
+  width: 20px;
+  height: 20px;
+}
+.offer-courses__item__content__footer__buy:hover  svg path{
+
+  fill: #fff !important; 
+
+}
+.offer-courses__item__content__footer__buy:hover {
+  color: white;
+  background-color: #0cbc87;
+
+}
+.offer-courses__item:hover .offer-courses__item__content__footer__price{
+  display: none;
+}
+.offer-courses__item:hover .offer-courses__item__content__footer__buy{
+  display: flex;
+}
+
 .offer-courses__slider__btn-group{
 width: 100%;
 height: auto;
