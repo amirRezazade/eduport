@@ -1,0 +1,325 @@
+/* start Perspectives section  */
+.Perspectives {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    background-color: var(--bg-color-2);
+    padding: 11rem 0;
+    /* z-index: -1; */
+  }
+  .Perspectives__right {
+    width: 55%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+  }
+  .Perspectives__right__top {
+    display: flex;
+    /* justify-content: ; */
+    gap: 2rem;
+    position: relative;
+  }
+  .Perspectives__right__top__teachers {
+    position: relative;
+    bottom:35px;
+    width: 180px;
+    height: 237px;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem 1rem;
+    gap: 0.5rem;
+    /* justify-content: space-evenly; */
+    text-align: start;
+    background-color: var(--bg-color);
+    border-radius: .5rem;
+    box-shadow: 0px 0px 40px rgba(29, 58, 83, 0.219);
+  }
+  .Perspectives__right__top__teachers__icon {
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4c733;
+    top: -20px;
+    left: -20px;
+    /* display: none; */
+  }
+  .Perspectives__right__top__teachers__title {
+    font-family: vazir-bold;
+    color: var(--text-bold);
+    margin-bottom: 0.6rem;
+  }
+  .Perspectives__right__top__teachers__item {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+  }
+  .Perspectives__right__top__teachers__item__photo {
+    width: 30%;
+    border-radius: 0.3rem;
+    /* height: 100%; */
+  }
+  .Perspectives__right__top__teachers__item__img {
+    border-radius: 0.3rem;
+    object-fit: cover;
+  }
+  .Perspectives__right__top__teachers__item__desc {
+    display: flex;
+    gap: 0.3rem;
+    flex-direction: column;
+  }
+  .Perspectives__right__top__teachers__item__name {
+    font-family: vazir-bold;
+    font-size: 0.9rem;
+    color: var(--text-bold);
+  }
+  .Perspectives__right__top__teachers__item__text {
+    font-size: 0.8rem;
+    clear: var(--text-light);
+  }
+  
+  .Perspectives__right__top__comment {
+    width: 400px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    /* position: relative; */
+    padding: 1.5rem;
+    text-align: center;
+    border-radius: .5rem;
+    z-index: 1 ;
+    background-color: var(--bg-color);
+    box-shadow: 0px 0px 40px rgba(29, 58, 83, 0.219);
+  }
+   .Perspectives__right__top__comment__circle {
+    position: absolute;
+    right: -14%;
+    top: -40%;
+   /* z-index: 0 !important ; */
+  }
+  .Perspectives__right__top__comment__circle svg {
+    width: 100%;
+    height: 100%;
+    fill: rgba(250, 113, 113, 0.234);
+  }
+  .Perspectives__right__comment-photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+  }
+  .Perspectives__right__comment-img {
+    border-radius: 50%;
+  }
+  .Perspectives__right__comment__text {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    line-height: 1.4rem;
+  }
+  .Perspectives__right__comment__text svg {
+    width: 20px;
+    height: 20px;
+    vertical-align: sub;
+  }
+  .Perspectives__right__comment__stars svg {
+    width: 20px;
+    height: 20px;
+  }
+  .Perspectives__right__comment__name {
+    color: var(--text-bold);
+    font-family: vazir-bold;
+  }
+  .Perspectives__right__bottom {
+   display: flex;
+   justify-content: end;
+   gap: 1.8rem;
+   align-items: center;
+   padding: 0 3rem;
+   position: relative;
+  }
+  .Perspectives__right__bottom__comment{
+    width: 280px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+    padding: 1.5rem;
+    text-align: center;
+    border-radius: .5rem;
+   align-self: flex-end;
+    bottom: 50px;
+    /* z-index: 5; */
+    background-color: var(--bg-color);
+    box-shadow: 0px 0px 40px rgba(29, 58, 83, 0.219);
+  }
+  .Perspectives__right__bottom__img{
+    position: absolute;
+    left: 190px;
+    bottom: 160px;
+    z-index: 1;
+  }
+  .Perspectives__right__bottom__img  svg{
+   fill: #d6293e ;
+  width: 100%;
+  height: 100%;
+  }
+  .Perspectives__right__bottom__box{
+  width: 185px;
+  height: auto;
+  padding:1.2rem  .6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: auto;
+  gap: .4rem;
+  border-radius: .7rem;
+  background: url(../images/header/02.png) center center /cover no-repeat;
+  position:  relative;
+  bottom: 50px;
+  z-index: 5;
+  background-color: var(--text-active);
+  }
+  .Perspectives__right__bottom__box__num{
+  font-family: vazir-bold;
+  color: #fff;
+  }
+  
+  .Perspectives__right__bottom__box__text{
+   color: #fff;
+  }
+  .Perspectives__left {
+    width: 30%;
+    align-self: center;
+    /* padding-right: 1rem; */
+  }
+  .Perspectives__left__title {
+    font-family: vazir-bold;
+    color: var(--text-bold);
+    font-size: 2.2rem;
+  }
+  .Perspectives__left__text {
+    color: var(--text-light);
+    margin: 1.8rem 0;
+    line-height: 1.4rem;
+  }
+  .Perspectives__left__link {
+    padding: .4rem .8rem;
+    border-radius: .4rem ;
+    font-size: .9rem;
+    background-color: var(--text-active);
+    color: #fff;
+  }
+  
+  @media screen and (max-width:1340px) {
+    .Perspectives__right {
+      width: 60%;
+    }
+    .Perspectives__left {
+      width: 35%;
+    }
+  }
+  @media screen and (max-width:1120px) {
+    .Perspectives {
+      flex-direction: column-reverse;
+      text-align: center;
+      gap: 7rem;
+      padding: 5rem 0;
+    }
+    .Perspectives__right {
+      width:100%;
+    }
+    .Perspectives__right__top {
+      justify-content: center;
+    }
+    .Perspectives__right__top__comment{
+      width: 50%;
+      margin-right: -100px;
+    }
+    .Perspectives__right__top__comment__circle{
+      right: -4%;
+    }
+    .Perspectives__right__top__teachers{
+      margin-left:10%;
+  
+    }
+    .Perspectives__right__bottom__comment{
+      width: 380px;
+      bottom: 15px;
+    }
+    .Perspectives__right__bottom__img{
+      left: 370px;
+    }
+    .Perspectives__right__bottom__box{
+      left: 30px;
+    }
+    .Perspectives__left {
+      width: 100%;
+      padding: 0 4rem;
+    }
+  }
+  @media screen and (max-width:1120px) {
+    .Perspectives__right__top {
+      justify-content: center;
+    }
+    .Perspectives__right__top__teachers{
+      margin-left:0;
+  
+    }
+    .Perspectives__right__top__comment{
+      width: 50%;
+      /* margin-right: -100px; */
+    }
+    .Perspectives__right__bottom__img{
+    display: none;
+    }
+    .Perspectives__right__bottom__comment{
+      width: 300px;
+      bottom: 15px;
+    }
+  }
+  @media screen and (max-width:750px) {
+    .Perspectives{
+      gap: 2rem;
+    }
+   
+    .Perspectives__right{
+      gap: 2.3rem;
+    }
+    .Perspectives__right__top__teachers{
+     display: none;
+  
+    }
+    .Perspectives__right__top__comment{
+      width: 90%;
+      margin-right: 0;
+    }
+    .Perspectives__right__bottom__box{
+      display: none;
+    }
+    .Perspectives__right__bottom{
+      justify-content: center;
+      padding: 0;
+    }
+    .Perspectives__right__bottom__comment{
+      width: 90%;
+      position: static;
+    }
+  }
+  @media screen and (max-width:600px) {
+    .Perspectives__left {
+      padding: 0 2rem;
+    }
+    .Perspectives__right__top__comment__circle{
+      right: -15%;
+      top: -20%;
+    }
+  }
+  /* finish Perspectives section  */
+  
