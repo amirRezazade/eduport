@@ -61,6 +61,7 @@
      .info{
        flex-wrap: wrap;
        margin: 1rem 0;
+      gap: .7rem;
      }
      .info__box{
        width: 90%;

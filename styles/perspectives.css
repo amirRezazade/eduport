@@ -79,7 +79,7 @@
   }
   .Perspectives__right__top__teachers__item__text {
     font-size: 0.8rem;
-    clear: var(--text-light);
+    color: var(--text-light);
   }
   
   .Perspectives__right__top__comment {

@@ -11,6 +11,10 @@ const popularCourseBtn = $.querySelectorAll(".popular-course__btn");
 const courseItems = $.querySelectorAll(".course__item");
 const profileContent = $.querySelector(".nav__profile-content");
 const offerCoursesSlider = $.querySelector(".offer-courses__slider__content");
+const upToTop = document.querySelector(".up-to-top");
+const upToTopCircle = document.querySelector(".up-to-top-circle");
+const infoSection = document.querySelector(".info");
+const infoNumbers = document.querySelectorAll(".info__box__desc__title__number");
 const offerCoursesItem = $.querySelectorAll(".offer-courses__item").length;
 const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
 let theme
@@ -50,10 +54,33 @@ window.addEventListener('scroll', ()=>{
 else{
   nav.classList.add('nav-down')
  }
-
  oldScroll=newScroll
  
+  if (window.scrollY > 400) {
+    upToTop.classList.add("up-to-top-active");
+  } else {
+    upToTop.classList.remove("up-to-top-active");
+  }
+  const scrollHeight = document.body.scrollHeight - window.innerHeight;
+  const scrollPosition = window.scrollY;
+  const progress = (scrollPosition / scrollHeight) * 251;
+  upToTopCircle.style.strokeDashoffset = 251 - progress;
+
+  // console.log(infoSection.getBoundingClientRect());
+if(infoSection.getBoundingClientRect().top < 350){
+
+   infoNumbers.forEach(elem=>{    
+    if(Number(elem.textContent) == elem.dataset.number){
+      console.log(1);
+      infoSectionCount()
+    }
+   })
+   
+}
+
+ 
 })
+
 window.addEventListener('click', event=>{
   if (!toggle.contains(event.target) && !accordionMenu.contains(event.target)) {
     toggle.classList.remove("nav__toggle-close");
@@ -81,6 +108,11 @@ popularCourseBtn.forEach(elem=>{
 searchBoxInput.addEventListener('focus',searchBoxInputClear)
 searchBoxInput.addEventListener('blur',searchBoxInputClear)
 searchBoxInput.addEventListener('keyup',searchBoxInputClear)
+upToTop.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+  });
+});
 
 function searchBoxInputClear(){
   if(searchBoxInput.value!=''){
@@ -134,7 +166,24 @@ profile.addEventListener("click", (event) => {
   
 });
 
-
+ function infoSectionCount(){
+  let i =0
+   console.log(2);
+  infoNumbers.forEach(elem=>{
+    elem.textContent=i
+    let time = setInterval(() => {
+      console.log(3);
+       i++
+   elem.innerHTML= i
+      if(Number(elem.textContent)>=elem.dataset.number){
+        elem.textContent=elem.dataset.number
+        clearInterval(time)
+        console.log(4);
+        
+      }
+    }, 10);
+  })
+ }
 
 function changeTheme(elem){
   theme=''
@@ -153,6 +202,7 @@ function applyTheme(){
     root.style.setProperty("--bg-color-2", "#2a2c31");
     root.style.setProperty("--bg-green-color", "#051b11");
     document.querySelector('.nav__right-img').src='images/navbar/logo-light.svg'
+    document.querySelector('.footer__section__img').src='images/navbar/logo-light.svg'
   }
   if(th=='white'){
     root.style.setProperty("--text-light", "#747579");
@@ -163,6 +213,7 @@ function applyTheme(){
     root.style.setProperty("--bg-color-2", "#f5f7f9");
     root.style.setProperty("--bg-green-color", "#cff2e7");
     document.querySelector('.nav__right-img').src='images/navbar/logo.svg'
+    document.querySelector('.footer__section__img').src='images/navbar/logo.svg'
   }
   if(th=='auto'){
     if (isDarkMode) {
@@ -174,14 +225,17 @@ function applyTheme(){
       root.style.setProperty("--bg-color-2", "#2a2c31");
       root.style.setProperty("--bg-green-color", "#051b11");
       document.querySelector('.nav__right-img').src='images/navbar/logo-light.svg'
+      document.querySelector('.footer__section__img').src='images/navbar/logo-light.svg'
      } else {
       root.style.setProperty("--text-light", "#747579");
       root.style.setProperty("--text-bold", "#24292d");
       root.style.setProperty("--bg-hover", "#e9eff9");
       root.style.setProperty("--item-bg-color", "#ffffff");
       root.style.setProperty("--bg-color", "#ffffff");
+      root.style.setProperty("--bg-color-2", "#2a2c31");
       root.style.setProperty("--bg-green-color", "#cff2e7");
       document.querySelector('.nav__right-img').src='images/navbar/logo.svg'
+      document.querySelector('.footer__section__img').src='images/navbar/logo.svg'
      }
   }
   themeOption.forEach((el) => {
