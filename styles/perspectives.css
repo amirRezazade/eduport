@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     background-color: var(--bg-color-2);
-    padding: 11rem 0;
+    padding-top: 11rem ;
     /* z-index: -1; */
   }
   .Perspectives__right {
