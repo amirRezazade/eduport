@@ -6,7 +6,7 @@
 
 ## 🔗 لینک دمو
 
-<a href="https://amirrezazade.github.io/eduport/">مشاهده وب‌سایت به صورت زنده</a>
+<a href="https://amirrezazade.github.io/eduport/" target="_blank">مشاهده وب‌سایت به صورت زنده</a>
 
 
 ---
