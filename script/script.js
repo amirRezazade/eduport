@@ -25,18 +25,11 @@ let slideIndex = 0;
 
 
 
-function showSlider(index) {
-  let width = $.querySelector(".offer-courses__item").getBoundingClientRect()
-    .width;
-  if (index == "next") {
-    slideIndex <= offerCoursesItem - 2 ? slideIndex++ : (slideIndex = 0);
-  }
-  if (index == "prev") {
-    slideIndex <= 0 ? (slideIndex = offerCoursesItem - 1) : slideIndex--;
-  }
-  offerCoursesSlider.style.transform = `translateX(${width * slideIndex}px)`;
-}
 
+window.addEventListener('load', ()=> {
+    document.querySelector('.loading').style.display = 'none';
+    document.querySelector('.content').style.display = 'block';
+});
 window.addEventListener("DOMContentLoaded", () => {
   if (window.scrollY == 0) nav.classList.add("nav-down");
 
@@ -107,17 +100,7 @@ upToTop.addEventListener("click", () => {
   });
 });
 
-function searchBoxInputClear() {
-  if (searchBoxInput.value != "") {
-    searchBoxInput.nextElementSibling.style.visibility = "visible";
-  } else {
-    searchBoxInput.nextElementSibling.style.visibility = "hidden";
-  }
-  searchBoxInput.nextElementSibling.addEventListener("click", () => {
-    searchBoxInput.value = "";
-    searchBoxInput.nextElementSibling.style.visibility = "hidden";
-  });
-}
+
 themeOption.forEach((elem) => {
   elem.addEventListener("click", () => {
     changeTheme(elem);
@@ -224,7 +207,7 @@ function applyTheme() {
       root.style.setProperty("--bg-hover", "#e9eff9");
       root.style.setProperty("--item-bg-color", "#ffffff");
       root.style.setProperty("--bg-color", "#ffffff");
-      root.style.setProperty("--bg-color-2", "#2a2c31");
+      root.style.setProperty("--bg-color-2", "#f5f7f9");
       root.style.setProperty("--bg-green-color", "#cff2e7");
       document.querySelector(".nav__right-img").src = "images/navbar/logo.svg";
       document.querySelector(".footer__section__img").src =
@@ -244,4 +227,26 @@ function applyCoursesFilter(e) {
       elem.style.display = "block";
     } else elem.style.display = "none";
   });
+}
+function searchBoxInputClear() {
+  if (searchBoxInput.value != "") {
+    searchBoxInput.nextElementSibling.style.visibility = "visible";
+  } else {
+    searchBoxInput.nextElementSibling.style.visibility = "hidden";
+  }
+  searchBoxInput.nextElementSibling.addEventListener("click", () => {
+    searchBoxInput.value = "";
+    searchBoxInput.nextElementSibling.style.visibility = "hidden";
+  });
+}
+function showSlider(index) {
+  let width = $.querySelector(".offer-courses__item").getBoundingClientRect()
+    .width;
+  if (index == "next") {
+    slideIndex <= offerCoursesItem - 2 ? slideIndex++ : (slideIndex = 0);
+  }
+  if (index == "prev") {
+    slideIndex <= 0 ? (slideIndex = offerCoursesItem - 1) : slideIndex--;
+  }
+  offerCoursesSlider.style.transform = `translateX(${width * slideIndex}px)`;
 }
