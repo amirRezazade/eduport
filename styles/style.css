@@ -26,7 +26,42 @@ html {
 body {
   background-color: var(--bg-color);
 }
+ /* start loader styles  */
 
+ .loader {
+  width: 48px;
+  height: 48px;
+  display: inline-block;
+  position: relative;
+}
+.loader::after,
+.loader::before {
+  content: '';  
+  box-sizing: border-box;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid #FFF;
+  position: absolute;
+  left: 0;
+  top: 0;
+  animation: animloader 2s linear infinite;
+}
+.loader::after {
+  animation-delay: 1s;
+}
+
+@keyframes animloader {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+ /* finish loader styles  */
 /* start up to top style   */
 
 .up-to-top {
@@ -83,3 +118,26 @@ body {
 }
 
 /* finish up to top style   */
+
+/* start scrollbar style  */
+
+::-webkit-scrollbar {
+  width: 11px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-color); 
+}
+::-webkit-scrollbar-track:hover {
+  background: var(--bg-hover); 
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--text-active); 
+  border-radius: 6px; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-active); 
+}
+/* finish scrollbar style  */
